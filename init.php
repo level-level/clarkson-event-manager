@@ -1,4 +1,4 @@
 <?php
-add_action('plugins_loaded', function(){
+add_action('init', function(){
     new \LL\EventManager\Setup();
 });

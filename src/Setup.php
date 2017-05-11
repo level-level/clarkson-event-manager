@@ -9,7 +9,8 @@ class Setup{
     */
   public function __construct(){
     if($this->checkDependencies()){
-      
+      $this->createPostType();
+      $this->loadDefaultACFFields();
     }
   }
 
@@ -36,7 +37,17 @@ class Setup{
     * Create ll-event post type
     */
   protected function createPostType(){
-
+    register_post_type( 'll_event',
+      array(
+        'labels' => array(
+          'name' => __( 'Events' ),
+          'singular_name' => __( 'Event' )
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon'=>'dashicons-calendar'
+      )
+    );
   }
 
   /**
