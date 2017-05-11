@@ -52,6 +52,9 @@ class Setup{
         ),
         'public' => true,
         'has_archive' => true,
+        'rewrite'=>array(
+          'slug' => apply_filters( 'll_event_manager_post_type_slug', 'events' )
+        ),
         'menu_icon'=>'dashicons-calendar'
       )
     );
