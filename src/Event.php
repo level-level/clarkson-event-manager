@@ -29,4 +29,11 @@ class Event extends \Clarkson_Object{
   public function dump() : string{
     return print_r($this, true);
   }
+
+  public function getDateTime($date, $time) {
+    if(empty($time)){
+      $time = "00:00";
+    }
+    return \DateTime::createFromFormat("d-m-Y H:i", "$date $time");
+  }
 }

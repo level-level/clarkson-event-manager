@@ -14,7 +14,7 @@ class EventController{
    */
   public function prepareQuery(EventControllerOptions $options) : \WP_Query{
     $args = array();
-    // @TODO: fill wp_query object
+    $args['post_type'] = 'll_event';
 
     return new \WP_Query($args);
   }
@@ -28,8 +28,9 @@ class EventController{
   public function getEvents(\WP_Query &$query) : array{
     $posts = $query->get_posts();
     $events = array();
+    $eventClass = apply_filters('ll_event_manager_post_class', '\LL\EventManager\Event');
     foreach($posts as $eventObject){
-      $events[] = new Event($eventObject);
+      $events[] = new $eventClass($eventObject);
     }
     return $events;
   }
