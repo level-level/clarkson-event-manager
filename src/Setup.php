@@ -2,10 +2,12 @@
 
 namespace LL\EventManager;
 
+/**
+ * Initialises dependencies and post-types.
+ */
 class Setup{
-
   /**
-    * The slug used for the event post type
+    * @var PPOST_TYPE_SLUG The slug used for the event post type
     */
   const POST_TYPE_SLUG = 'll_event';
 
