@@ -20,4 +20,13 @@ class Event extends \Clarkson_Object{
     parent::__construct($post);
     $this->data = get_fields($post->id);
   }
+
+  /**
+   * Outputs debugging information of the contents of this object
+   * @method dump
+   * @return string Debugging data
+   */
+  public function dump() : string{
+    return print_r($this, true);
+  }
 }
