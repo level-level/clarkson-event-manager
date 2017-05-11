@@ -1,0 +1,20 @@
+{
+    "name": "ll-custom/event-manager",
+    "description": "Event manager based on Clarkson and ACF.",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Level Level",
+            "email": "info@level-level.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+      "psr-4":{
+        "LL\\EventManager\\": "src/"
+      },
+      "files": ["init.php"]
+    }
+}
