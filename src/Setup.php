@@ -315,11 +315,27 @@ class Setup{
       			'placement' => 'left',
       			'endpoint' => 0,
       		),
-      		array (
+          array (
       			'key' => 'field_59145a8fb2e28',
       			'label' => 'More info link',
       			'name' => 'information_more_link',
       			'type' => 'url',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array (
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      		),
+          array (
+      			'key' => 'field_59145a8ab2e11',
+      			'label' => 'Short description',
+      			'name' => 'information_short_description',
+      			'type' => 'text',
       			'instructions' => '',
       			'required' => 0,
       			'conditional_logic' => 0,

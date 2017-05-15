@@ -18,7 +18,7 @@ class Event extends \Clarkson_Object{
    */
   public function __construct(\WP_Post $post){
     parent::__construct($post);
-    $this->data = get_fields($post->id);
+    $this->data = get_fields($post->ID);
   }
 
   /**

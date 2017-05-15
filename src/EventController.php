@@ -15,7 +15,15 @@ class EventController{
   public function prepareQuery(EventControllerOptions $options) : \WP_Query{
     $args = array();
     $args['post_type'] = 'll_event';
+    $args['meta_key'] = 'date_start';
+    $args['orderby'] = 'meta_value';
+    $args['order'] = 'ASC';
 
+    $args['meta_query'] = array();
+
+    $args['meta_query'][] = $options->getStartDateQuery();
+
+    $args = apply_filters('ll_event_manager_query_args', $args);
     return new \WP_Query($args);
   }
 
@@ -26,6 +34,7 @@ class EventController{
    * @return array            Array of Event objects
    */
   public function getEvents(\WP_Query &$query) : array{
+
     $posts = $query->get_posts();
     $events = array();
     $eventClass = apply_filters('ll_event_manager_post_class', '\LL\EventManager\Event');
