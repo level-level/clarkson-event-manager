@@ -46,14 +46,25 @@ class Setup{
   protected function createPostType(){
     register_post_type( self::POST_TYPE_SLUG,
       array(
-        'labels' => array(
-          'name' => __( 'Events' ),
-          'singular_name' => __( 'Event' )
-        ),
         'public' => true,
         'has_archive' => true,
         'supports'=> ['title', 'thumbnail'],
         'rewrite'=>array(
+		'labels'            => array(
+		'name'                => __( 'Events', 'll-event-manager' ),
+		'singular_name'       => __( 'Event', 'll-event-manager' ),
+		'all_items'           => __( 'All Events', 'll-event-manager' ),
+		'new_item'            => __( 'New Event', 'll-event-manager' ),
+		'add_new'             => __( 'Add New', 'll-event-manager' ),
+		'add_new_item'        => __( 'Add New Event', 'll-event-manager' ),
+		'edit_item'           => __( 'Edit Event', 'll-event-manager' ),
+		'view_item'           => __( 'View Event', 'll-event-manager' ),
+		'search_items'        => __( 'Search Events', 'll-event-manager' ),
+		'not_found'           => __( 'No Events found', 'll-event-manager' ),
+		'not_found_in_trash'  => __( 'No Events found in trash', 'll-event-manager' ),
+		'parent_item_colon'   => __( 'Parent Event', 'll-event-manager' ),
+		'menu_name'           => __( 'Events', 'll-event-manager' ),
+		),
           'slug' => apply_filters( 'll_event_manager_post_type_slug', 'events' )
         ),
         'menu_icon'=>'dashicons-calendar'
