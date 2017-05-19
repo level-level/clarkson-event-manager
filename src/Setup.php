@@ -24,7 +24,7 @@ class Setup{
   /**
     * Check for Clarkson and ACF
     */
-  protected function checkDependencies() : bool{
+  protected function checkDependencies(){
     if(!class_exists('Clarkson_Core')){
       add_action( 'admin_notices', function(){
       	echo '<div class="notice notice-error"><p>Please install Clarkson-core to use the event-manager library</p></div>';
