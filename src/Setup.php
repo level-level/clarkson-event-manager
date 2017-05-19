@@ -46,10 +46,6 @@ class Setup{
   protected function createPostType(){
     register_post_type( self::POST_TYPE_SLUG,
       array(
-        'public' => true,
-        'has_archive' => true,
-        'supports'=> ['title', 'thumbnail'],
-        'rewrite'=>array(
 		'labels'            => array(
 		'name'                => __( 'Events', 'll-event-manager' ),
 		'singular_name'       => __( 'Event', 'll-event-manager' ),
@@ -65,9 +61,20 @@ class Setup{
 		'parent_item_colon'   => __( 'Parent Event', 'll-event-manager' ),
 		'menu_name'           => __( 'Events', 'll-event-manager' ),
 		),
+        'public'			=> true,
+		'hierarchical'      => false,
+		'show_ui'           => true,
+		'show_in_nav_menus' => true,
+        'has_archive' 		=> true,
+		'supports'			=> ['title', 'editor', 'thumbnail'],
+        'rewrite'			=> array(
           'slug' => apply_filters( 'll_event_manager_post_type_slug', 'events' )
         ),
-        'menu_icon'=>'dashicons-calendar'
+		'query_var'         => true,
+		'show_in_rest'      => true,
+        'menu_icon' 		=>'dashicons-calendar',
+		'rest_base'         => apply_filters( 'll_event_manager_rest_base', 'events' ),
+		'rest_controller_class' => 'WP_REST_Posts_Controller',
       )
     );
   }
