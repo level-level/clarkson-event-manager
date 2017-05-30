@@ -66,7 +66,7 @@ class Setup{
 		'show_ui'           => true,
 		'show_in_nav_menus' => true,
         'has_archive' 		=> true,
-		'supports'			=> ['title', 'editor', 'thumbnail'],
+		'supports'			=> apply_filters( 'll_event_manager_post_type_support', ['title', 'editor', 'thumbnail'] ),
         'rewrite'			=> array(
           'slug' => apply_filters( 'll_event_manager_post_type_slug', 'events' )
         ),
