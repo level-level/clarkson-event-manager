@@ -33,7 +33,7 @@ class EventController{
    * @param  \WP_Query  $query Query object to use as filter
    * @return array            Array of Event objects
    */
-  public function getEvents(\WP_Query &$query) : array{
+  public function getEvents(\WP_Query &$query) {
 
     $posts = $query->get_posts();
     $events = array();

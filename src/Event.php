@@ -26,7 +26,7 @@ class Event extends \Clarkson_Object{
    * @method dump
    * @return string Debugging data
    */
-  public function dump() : string{
+  public function dump(){
     return print_r($this, true);
   }
 
