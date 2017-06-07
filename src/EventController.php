@@ -14,7 +14,7 @@ class EventController{
    */
   public function prepareQuery(EventControllerOptions $options){
     $args = array();
-    $args['post_type'] = 'll_event';
+    $args['post_type'] = 'clarkson_event';
     $args['meta_key'] = 'date_start';
     $args['orderby'] = 'meta_value';
     $args['order'] = 'ASC';
