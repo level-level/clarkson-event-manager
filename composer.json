@@ -1,12 +1,11 @@
 {
-    "name": "ll-custom/event-manager",
+    "name": "level-level/clarkson-event-manager",
     "description": "Event manager based on Clarkson and ACF.",
     "type": "library",
     "license": "proprietary",
     "authors": [
         {
-            "name": "Level Level",
-            "email": "info@level-level.com"
+            "name": "Level Level"
         }
     ],
     "minimum-stability": "stable",
