@@ -12,7 +12,7 @@ class EventController{
    * @param  EventControllerOptions           $options Options for the base query
    * @return WP_Query        Query object with post type, datetimes set.
    */
-  public function prepareQuery(EventControllerOptions $options) : \WP_Query{
+  public function prepareQuery(EventControllerOptions $options){
     $args = array();
     $args['post_type'] = 'll_event';
     $args['meta_key'] = 'date_start';

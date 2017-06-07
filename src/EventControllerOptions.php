@@ -13,23 +13,23 @@ class EventControllerOptions{
   public function set_start($value){
     $this->start = $value;
   }
-  public function set_end(\DateTime $value){
+  public function set_end( $value){
     $this->end = $value;
   }
-  public function set_location(string $value){
+  public function set_location($value){
     $this->location = $value;
   }
-  public function set_address(string $value){
+  public function set_address($value){
     $this->address = $value;
   }
-  public function set_postcode(string $value){
+  public function set_postcode($value){
     $this->postcode = $value;
   }
-  public function set_city(string $value){
+  public function set_city($value){
     $this->city = $value;
   }
 
-  public function getStartDateQuery() : array{
+  public function getStartDateQuery(){
     if($this->start === false){
       return array();
     }
