@@ -1,15 +1,15 @@
 <?php
 
-namespace LL\EventManager;
+namespace Clarkson\EventManager;
 
 /**
  * Initialises dependencies and post-types.
  */
-class Setup{
+class Setup {
   /**
     * @var PPOST_TYPE_SLUG The slug used for the event post type
     */
-  const POST_TYPE_SLUG = 'll_event';
+  const POST_TYPE_SLUG = 'clarkson_event';
 
   /**
     * Bootstrap the setup for the EventManager
@@ -47,33 +47,33 @@ class Setup{
     register_post_type( self::POST_TYPE_SLUG,
       array(
 		'labels'            => array(
-		'name'                => __( 'Events', 'll-event-manager' ),
-		'singular_name'       => __( 'Event', 'll-event-manager' ),
-		'all_items'           => __( 'All Events', 'll-event-manager' ),
-		'new_item'            => __( 'New Event', 'll-event-manager' ),
-		'add_new'             => __( 'Add New', 'll-event-manager' ),
-		'add_new_item'        => __( 'Add New Event', 'll-event-manager' ),
-		'edit_item'           => __( 'Edit Event', 'll-event-manager' ),
-		'view_item'           => __( 'View Event', 'll-event-manager' ),
-		'search_items'        => __( 'Search Events', 'll-event-manager' ),
-		'not_found'           => __( 'No Events found', 'll-event-manager' ),
-		'not_found_in_trash'  => __( 'No Events found in trash', 'll-event-manager' ),
-		'parent_item_colon'   => __( 'Parent Event', 'll-event-manager' ),
-		'menu_name'           => __( 'Events', 'll-event-manager' ),
+		'name'                => __( 'Events', 'clarkson-event-manager' ),
+		'singular_name'       => __( 'Event', 'clarkson-event-manager' ),
+		'all_items'           => __( 'All Events', 'clarkson-event-manager' ),
+		'new_item'            => __( 'New Event', 'clarkson-event-manager' ),
+		'add_new'             => __( 'Add New', 'clarkson-event-manager' ),
+		'add_new_item'        => __( 'Add New Event', 'clarkson-event-manager' ),
+		'edit_item'           => __( 'Edit Event', 'clarkson-event-manager' ),
+		'view_item'           => __( 'View Event', 'clarkson-event-manager' ),
+		'search_items'        => __( 'Search Events', 'clarkson-event-manager' ),
+		'not_found'           => __( 'No Events found', 'clarkson-event-manager' ),
+		'not_found_in_trash'  => __( 'No Events found in trash', 'clarkson-event-manager' ),
+		'parent_item_colon'   => __( 'Parent Event', 'clarkson-event-manager' ),
+		'menu_name'           => __( 'Events', 'clarkson-event-manager' ),
 		),
         'public'			=> true,
 		'hierarchical'      => false,
 		'show_ui'           => true,
 		'show_in_nav_menus' => true,
         'has_archive' 		=> true,
-		'supports'			=> apply_filters( 'll_event_manager_post_type_support', ['title', 'editor', 'thumbnail'] ),
+		'supports'			=> apply_filters( 'clarkson_event_manager_post_type_support', ['title', 'editor', 'thumbnail'] ),
         'rewrite'			=> array(
-          'slug' => apply_filters( 'll_event_manager_post_type_slug', 'events' )
+          'slug' => apply_filters( 'clarkson_event_manager_post_type_slug', 'events' )
         ),
 		'query_var'         => true,
 		'show_in_rest'      => true,
         'menu_icon' 		=>'dashicons-calendar',
-		'rest_base'         => apply_filters( 'll_event_manager_rest_base', 'events' ),
+		'rest_base'         => apply_filters( 'clarkson_event_manager_rest_base', 'events' ),
 		'rest_controller_class' => 'WP_REST_Posts_Controller',
       )
     );
@@ -653,7 +653,7 @@ class Setup{
       			array (
       				'param' => 'post_type',
       				'operator' => '==',
-      				'value' => 'll_event',
+      				'value' => 'clarkson_event',
       			),
       		),
       	),

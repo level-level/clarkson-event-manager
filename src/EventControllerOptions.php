@@ -1,6 +1,6 @@
 <?php
 
-namespace LL\EventManager;
+namespace Clarkson\EventManager;
 
 class EventControllerOptions{
   protected $start = null;

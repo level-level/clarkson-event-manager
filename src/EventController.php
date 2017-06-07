@@ -1,6 +1,6 @@
 <?php
 
-namespace LL\EventManager;
+namespace Clarkson\EventManager;
 
 /**
  * Provides interfaces for searching and quering events
@@ -23,7 +23,7 @@ class EventController{
 
     $args['meta_query'][] = $options->getStartDateQuery();
 
-    $args = apply_filters('ll_event_manager_query_args', $args);
+    $args = apply_filters('clarkson_event_manager_query_args', $args);
     return new \WP_Query($args);
   }
 
@@ -37,7 +37,7 @@ class EventController{
 
     $posts = $query->get_posts();
     $events = array();
-    $eventClass = apply_filters('ll_event_manager_post_class', '\LL\EventManager\Event');
+    $eventClass = apply_filters('clarkson_event_manager_post_class', '\Clarkson\EventManager\Event');
     foreach($posts as $eventObject){
       $events[] = new $eventClass($eventObject);
     }
