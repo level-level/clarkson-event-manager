@@ -109,7 +109,7 @@ class Setup {
       		array (
       			'key' => 'field_5914595eb2e22',
       			'label' => 'Start date',
-      			'name' => 'date_start',
+      			'name' => 'clarkson_event_manager_date_start',
       			'type' => 'date_picker',
       			'instructions' => '',
       			'required' => 1,
@@ -126,7 +126,7 @@ class Setup {
       		array (
       			'key' => 'field_5914599ab2e23',
       			'label' => 'Start time',
-      			'name' => 'date_start_time',
+      			'name' => 'clarkson_event_manager_date_start_time',
       			'type' => 'time_picker',
       			'instructions' => '',
       			'required' => 0,
@@ -142,7 +142,7 @@ class Setup {
       		array (
       			'key' => 'field_591459f1b2e24',
       			'label' => 'End date',
-      			'name' => 'date_end',
+      			'name' => 'clarkson_event_manager_date_end',
       			'type' => 'date_picker',
       			'instructions' => '',
       			'required' => 0,
@@ -159,7 +159,7 @@ class Setup {
       		array (
       			'key' => 'field_59145a37b2e25',
       			'label' => 'End time',
-      			'name' => 'date_end_time',
+      			'name' => 'clarkson_event_manager_date_end_time',
       			'type' => 'time_picker',
       			'instructions' => '',
       			'required' => 0,
@@ -191,7 +191,7 @@ class Setup {
       		array (
       			'key' => 'field_59145882b2e1a',
       			'label' => 'Venue',
-      			'name' => 'location_venue',
+      			'name' => 'clarkson_event_manager_location_venue',
       			'type' => 'text',
       			'instructions' => '',
       			'required' => 0,
@@ -210,7 +210,7 @@ class Setup {
       		array (
       			'key' => 'field_59145894b2e1b',
       			'label' => 'Address line 1',
-      			'name' => 'location_address_1',
+      			'name' => 'clarkson_event_manager_location_address_1',
       			'type' => 'text',
       			'instructions' => '',
       			'required' => 0,
@@ -229,7 +229,7 @@ class Setup {
       		array (
       			'key' => 'field_591458b2b2e1c',
       			'label' => 'Address line 2',
-      			'name' => 'location_address_2',
+      			'name' => 'clarkson_event_manager_location_address_2',
       			'type' => 'text',
       			'instructions' => '',
       			'required' => 0,
@@ -248,7 +248,7 @@ class Setup {
       		array (
       			'key' => 'field_591458d7b2e1d',
       			'label' => 'City',
-      			'name' => 'location_city',
+      			'name' => 'clarkson_event_manager_location_city',
       			'type' => 'text',
       			'instructions' => '',
       			'required' => 0,
@@ -267,7 +267,7 @@ class Setup {
       		array (
       			'key' => 'field_591458f2b2e1e',
       			'label' => 'Postcode',
-      			'name' => 'location_postcode',
+      			'name' => 'clarkson_event_manager_location_postcode',
       			'type' => 'text',
       			'instructions' => '',
       			'required' => 0,
@@ -286,7 +286,7 @@ class Setup {
       		array (
       			'key' => 'field_59145901b2e1f',
       			'label' => 'Country',
-      			'name' => 'location_country',
+      			'name' => 'clarkson_event_manager_location_country',
       			'type' => 'text',
       			'instructions' => '',
       			'required' => 0,
@@ -305,7 +305,7 @@ class Setup {
       		array (
       			'key' => 'field_59145914b2e20',
       			'label' => 'Google maps link',
-      			'name' => 'location_google_maps_link',
+      			'name' => 'clarkson_event_manager_location_google_maps_link',
       			'type' => 'url',
       			'instructions' => '',
       			'required' => 0,
@@ -337,7 +337,7 @@ class Setup {
           array (
       			'key' => 'field_59145a8fb2e28',
       			'label' => 'More info link',
-      			'name' => 'information_more_link',
+      			'name' => 'clarkson_event_manager_information_more_link',
       			'type' => 'url',
       			'instructions' => '',
       			'required' => 0,
@@ -353,7 +353,7 @@ class Setup {
           array (
       			'key' => 'field_59145a8ab2e11',
       			'label' => 'Short description',
-      			'name' => 'information_short_description',
+      			'name' => 'clarkson_event_manager_information_short_description',
       			'type' => 'text',
       			'instructions' => '',
       			'required' => 0,
@@ -369,7 +369,7 @@ class Setup {
       		array (
       			'key' => 'field_59145aacb2e29',
       			'label' => 'Attachments',
-      			'name' => 'information_attachments',
+      			'name' => 'clarkson_event_manager_information_attachments',
       			'type' => 'repeater',
       			'instructions' => '',
       			'required' => 0,
@@ -444,7 +444,7 @@ class Setup {
       		array (
       			'key' => 'field_59145b13b2e2c',
       			'label' => 'Ticket options',
-      			'name' => 'ticket_options',
+      			'name' => 'clarkson_event_manager_ticket_options',
       			'type' => 'repeater',
       			'instructions' => '',
       			'required' => 0,
@@ -554,7 +554,7 @@ class Setup {
       		array (
       			'key' => 'field_59145c35b2e33',
       			'label' => 'Contacts',
-      			'name' => 'contacts',
+      			'name' => 'clarkson_event_manager_contacts',
       			'type' => 'repeater',
       			'instructions' => '',
       			'required' => 0,
