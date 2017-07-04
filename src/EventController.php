@@ -15,7 +15,7 @@ class EventController{
   public function prepareQuery(EventControllerOptions $options){
     $args = array();
     $args['post_type'] = 'clarkson_event';
-    $args['meta_key'] = 'date_start';
+    $args['meta_key'] = 'clarkson_event_manager_date_start';
     $args['orderby'] = 'meta_value';
     $args['order'] = 'ASC';
 
@@ -24,9 +24,9 @@ class EventController{
     $args['meta_query'][] = $options->getStartDateQuery();
 
     $args = apply_filters('clarkson_event_manager_query_args', $args);
+
     return new \WP_Query($args);
   }
-
   /**
    *
    * @method getEvents
@@ -36,6 +36,7 @@ class EventController{
   public function getEvents(\WP_Query &$query) {
 
     $posts = $query->get_posts();
+
     $events = array();
     $eventClass = apply_filters('clarkson_event_manager_post_class', '\Clarkson\EventManager\Event');
     foreach($posts as $eventObject){

@@ -39,7 +39,7 @@ class EventControllerOptions{
     }
 
     return array(
-      'key'=>'date_start',
+      'key'=>'clarkson_event_manager_date_start',
       'value'=>$date->format('Ymd'),
       'compare'=>'>='
     );
