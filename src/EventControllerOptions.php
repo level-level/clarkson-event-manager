@@ -31,19 +31,19 @@ class EventControllerOptions{
 
   public function getStartDateQuery(){
     if($this->start === false){
-      return array();
+        return array();
     }
     $date = $this->start;
     if(is_null($this->start)){
-      $date = new \DateTime();
+        $date = new \DateTime();
     }
 
     return array(
-      'key'=>'clarkson_event_manager_date_start',
-      'value'=>$date->format('Ymd'),
-      'compare'=>'>='
+        'key'=>'date_start',
+        'value'=>$date->format('Ymd'),
+        'compare'=>'>='
     );
-  }
+}
 
   public function __get($name){
     return $this->$name;
