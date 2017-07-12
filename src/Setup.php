@@ -7,7 +7,7 @@ namespace Clarkson\EventManager;
  */
 class Setup {
   /**
-    * @var PPOST_TYPE_SLUG The slug used for the event post type
+    * @var POST_TYPE_SLUG The slug used for the event post type
     */
   const POST_TYPE_SLUG = 'clarkson_event';
 
