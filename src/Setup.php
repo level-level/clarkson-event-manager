@@ -27,13 +27,13 @@ class Setup {
   protected function checkDependencies(){
     if(!class_exists('Clarkson_Core')){
       add_action( 'admin_notices', function(){
-      	echo '<div class="notice notice-error"><p>Please install Clarkson-core to use the event-manager library</p></div>';
+      	echo '<div class="notice notice-error"><p>Please install Clarkson-core to use the event-manager library.</p></div>';
       });
       return false;
     }
-    if(!function_exists('get_fields')){
+    if(!function_exists('acf_add_local_field_group')){
       add_action( 'admin_notices', function(){
-      	echo '<div class="notice notice-error"><p>Please install ACF to use the event-manager library</p></div>';
+      	echo '<div class="notice notice-error"><p>Please install ACF Pro to use the Clarkson Event Manager library.</p></div>';
       });
       return false;
     }
