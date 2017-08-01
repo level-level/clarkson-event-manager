@@ -43,41 +43,48 @@ class Setup {
   /**
     * Create neccesary post type
     */
-  protected function createPostType(){
-    register_post_type( self::POST_TYPE_SLUG,
-      array(
-		'labels'            => array(
-		'name'                => __( 'Events', 'clarkson-event-manager' ),
-		'singular_name'       => __( 'Event', 'clarkson-event-manager' ),
-		'all_items'           => __( 'All Events', 'clarkson-event-manager' ),
-		'new_item'            => __( 'New Event', 'clarkson-event-manager' ),
-		'add_new'             => __( 'Add New', 'clarkson-event-manager' ),
-		'add_new_item'        => __( 'Add New Event', 'clarkson-event-manager' ),
-		'edit_item'           => __( 'Edit Event', 'clarkson-event-manager' ),
-		'view_item'           => __( 'View Event', 'clarkson-event-manager' ),
-		'search_items'        => __( 'Search Events', 'clarkson-event-manager' ),
-		'not_found'           => __( 'No Events found', 'clarkson-event-manager' ),
-		'not_found_in_trash'  => __( 'No Events found in trash', 'clarkson-event-manager' ),
-		'parent_item_colon'   => __( 'Parent Event', 'clarkson-event-manager' ),
-		'menu_name'           => __( 'Events', 'clarkson-event-manager' ),
-		),
-        'public'			=> true,
-		'hierarchical'      => false,
-		'show_ui'           => true,
-		'show_in_nav_menus' => true,
-        'has_archive' 		=> true,
-		'supports'			=> apply_filters( 'clarkson_event_manager_post_type_support', ['title', 'editor', 'thumbnail'] ),
-        'rewrite'			=> array(
-          'slug' => apply_filters( 'clarkson_event_manager_post_type_slug', 'events' )
-        ),
-		'query_var'         => true,
-		'show_in_rest'      => true,
-        'menu_icon' 		=>'dashicons-calendar',
-		'rest_base'         => apply_filters( 'clarkson_event_manager_rest_base', 'events' ),
-		'rest_controller_class' => 'WP_REST_Posts_Controller',
-      )
-    );
-  }
+	protected function createPostType() {
+
+		$args = array(
+			'labels'                => array(
+				'name'               => __( 'Events', 'clarkson-event-manager' ),
+				'singular_name'      => __( 'Event', 'clarkson-event-manager' ),
+				'all_items'          => __( 'All Events', 'clarkson-event-manager' ),
+				'new_item'           => __( 'New Event', 'clarkson-event-manager' ),
+				'add_new'            => __( 'Add New', 'clarkson-event-manager' ),
+				'add_new_item'       => __( 'Add New Event', 'clarkson-event-manager' ),
+				'edit_item'          => __( 'Edit Event', 'clarkson-event-manager' ),
+				'view_item'          => __( 'View Event', 'clarkson-event-manager' ),
+				'search_items'       => __( 'Search Events', 'clarkson-event-manager' ),
+				'not_found'          => __( 'No Events found', 'clarkson-event-manager' ),
+				'not_found_in_trash' => __( 'No Events found in trash', 'clarkson-event-manager' ),
+				'parent_item_colon'  => __( 'Parent Event', 'clarkson-event-manager' ),
+				'menu_name'          => __( 'Events', 'clarkson-event-manager' ),
+			),
+			'public'                => true,
+			'hierarchical'          => false,
+			'show_ui'               => true,
+			'show_in_nav_menus'     => true,
+			'has_archive'           => true,
+			'supports'              => apply_filters( 'clarkson_event_manager_post_type_support', [
+				'title',
+				'editor',
+				'thumbnail'
+			] ),
+			'rewrite'               => array(
+				'slug' => apply_filters( 'clarkson_event_manager_post_type_slug', 'events' )
+			),
+			'query_var'             => true,
+			'show_in_rest'          => true,
+			'menu_icon'             => 'dashicons-calendar',
+			'rest_base'             => apply_filters( 'clarkson_event_manager_rest_base', 'events' ),
+			'rest_controller_class' => 'WP_REST_Posts_Controller',
+		);
+
+		$args = apply_filters( 'clarkson_event_manager_register_post_type_args', $args );
+
+		register_post_type( self::POST_TYPE_SLUG, $args );
+	}
 
   /**
     * Load default ACF data, which contains fields as start-date, end-date
