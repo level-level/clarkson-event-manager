@@ -13,3 +13,8 @@ add_filter( 'clarkson_event_manager_post_class', function() {
   return '\Clarkson_Event';
 }, 10, 0 );
 ```
+
+## Example templates
+You can check out some [basic example templates](/templates) to style an Single Event or Archive page. 
+Always copy these to your own theme because these are examples!
+
