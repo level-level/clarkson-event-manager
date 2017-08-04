@@ -1,4 +1,4 @@
-<div {{ post_class( 'teaser event', object.get_ID() ) }} itemscope itemtype="http://schema.org/Event">
+<div {{ post_class( 'teaser event', object.get_id() ) }} itemscope itemtype="http://schema.org/Event">
     <a class="entry-title event-title" href="{{ object.get_permalink() }}" itemprop="name"> {{ object.get_title() | raw }}</a>
     <div class="entry-meta">
         <div class="date event-date">{{ object.get_event_date() | raw }}</div>
