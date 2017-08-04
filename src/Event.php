@@ -48,20 +48,4 @@ class Event extends \Clarkson_Object{
     }
     return \DateTime::createFromFormat("d-m-Y H:i", "$date $time");
   }
-
-  /**
-   * Check if one of the Address fields has a value
-   */
-  public function venueHasAddress(){
-
-    $needles = [ Fields::ADDRESS_1, Fields::ADDRESS_2, Fields::CITY, Fields::POSTCODE, Fields::COUNTRY ];
-      foreach ( $needles as $needle ) {
-        // Return true on the first hit that isn't empty
-        if ( array_key_exists( $needle, $this->data ) && ! empty( $this->data[ $needle ] ) ){
-          return true;
-        }
-      }
-
-      return false;
-  }
 }
