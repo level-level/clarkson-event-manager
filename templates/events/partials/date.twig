@@ -1,0 +1,13 @@
+<div class="event-detail event-date">
+{% if object.date_start is not same as(object.date_end) %}
+    {{ object.get_event_date_start_format('d F Y') }} {{ __('till', "clarkson-theme") }} {{ object.get_event_date_end_format('d F Y')}}
+{% else %}
+    {{ object.get_event_date_start_format('d F Y') }}
+{% endif %}
+
+{% if object.date_start_time is not empty %}
+    {{ __("at", "clarkson-theme")}} {{ object.get_event_date_start_time('H:i')}} {% if object.date_end_time is not empty %} - {{ object.get_event_date_end_time('H:i') }} {% endif %}
+{% endif %}
+    </div>
+
+

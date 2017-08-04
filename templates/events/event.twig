@@ -1,0 +1,19 @@
+<h1 class="entry-title">{{ object.get_title() | raw }}</h1>
+
+{% include('events/partials/date.twig') %}
+
+<div class="entry-content">
+    {{ object.get_content() | raw }}
+    {% if object.information_more_link is not empty %}
+      <p class='more-info-link'>{{ __("More info on external source", "clarkson-theme") }}: <a href='{{ object.information_more_link }}'>{{ object.information_more_link }}</a></p>
+    {% endif %}
+</div>
+{% include('events/partials/attachments.twig') %}
+
+{% include('events/partials/contacts.twig') %}
+{% include('events/partials/locations.twig') %}
+{% include('events/partials/tickets.twig') %}
+
+{{ comments_template() }}
+
+{% include('events/partials/sidebar.twig') %}

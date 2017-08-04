@@ -1,0 +1,9 @@
+<section class="widget widget_upcoming-events">
+    <h3 class="widgettitle">{{ object.title | raw }}</h3>
+
+    <div class="events">
+        {% for event in object.events %}
+            {% include 'events/partials/teaser.twig' with { object : event } %}
+        {% endfor %}
+    </div>
+</section>

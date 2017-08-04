@@ -1,0 +1,26 @@
+{% if object.contacts is not empty %}
+<div class="event-detail event-contacts" itemprop="organizer" itemscope itemtype="http://schema.org/Organization">
+    <h3 class="contact-title">{{ __("Contact","clarkson-theme") }}</h3>
+    {% for contact in object.contacts %}
+        <div class="contact-person">
+            <div class='fullname' itemprop="name">{{ contact.name }}</div>
+
+            {% if contact.organisation is not empty %}
+                <div class="organisation" itemprop="affiliation">{{ contact.organisation }}</div>
+            {% endif %}
+
+            {% if contact.phone is not empty %}
+                <div class="tel" itemprop="telephone">{{ contact.phone }}</div>
+            {% endif %}
+
+            {% if contact['e-mail'] is not empty %}
+                <a class="email" href="mailto:{{ contact['e-mail'] }}" itemprop="email">
+                    {#<span class="sr-only">#}
+                        {{ contact['e-mail'] }}
+                    {#</span>#}
+                </a>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+{% endif %}

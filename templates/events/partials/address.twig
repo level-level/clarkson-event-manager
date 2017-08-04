@@ -1,0 +1,24 @@
+{% if object.location_address_1 or object.location_address_2 or object.location_postcode or object.location_city or object.location_country %}
+
+<div class="venue-address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+
+    {% if object.location_address_1 %}
+    <span itemprop="streetAddress">{{ object.location_address_1 }}</span>
+    {% if object.location_address_2 is not empty %}<span itemprop="streetAddress"> {{ object.location_address_2 }}</span>{% endif %},
+    {% endif %}
+
+    {% if object.location_postcode %}
+        <span itemprop="postalCode">{{ object.location_postcode }}</span>,
+    {% endif %}
+
+    {% if object.location_city %}
+        <span itemprop="addressLocality">{{ object.location_city }}</span>,
+    {% endif %}
+
+    {% if object.location_country %}
+        <span itemprop="addressCountry">{{ object.location_country }}</span>
+    {% endif %}
+
+</div>
+
+{% endif %}
