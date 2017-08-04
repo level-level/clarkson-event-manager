@@ -21,6 +21,15 @@ class Event extends \Clarkson_Object{
     $this->data = get_fields($post->ID);
   }
 
+  public function __call( $method_name, $args ) {
+
+    // Map object.data.clarkson_event_manager_information_more_link to object.information_more_link in twig
+    if ( isset( $this->data[ 'clarkson_event_manager_' . $method_name ] ) ) {
+      return $this->data[ 'clarkson_event_manager_' . $method_name ];
+    }
+
+  }
+
   /**
    * Outputs debugging information of the contents of this object
    * @method dump
