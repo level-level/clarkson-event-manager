@@ -1,0 +1,9 @@
+<h1>{{ __("Events", "clarkson-theme") }}</h1>
+<div class="entry-content">
+{{ get_the_archive_description() | raw }}
+</div>
+<div class="events-list">
+    {% for objects in object %}
+        {% include 'events/partials/teaser.twig' with { object : object } %}
+    {% endfor %}
+</div>

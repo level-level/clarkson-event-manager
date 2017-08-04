@@ -1,0 +1,45 @@
+{% if object.location_venue is not empty %}
+
+  <div class="event-venue event-detail">
+
+    <h3 class="title">{{ __("Venue", "clarkson-theme") }}</h3>
+
+    <section class="venue-location" itemprop="location" itemscope itemtype="http://schema.org/Place">
+
+      <div class="venue-name" itemprop="name">{{ object.location_venue }}</div>
+
+      {% if( object.venueHasAddress() ) %}
+        <div class="venue-address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      {% endif %}
+
+        {% if object.location_address_1 %}
+          <span itemprop="streetAddress">{{ object.location_address_1 }}</span>
+          {% if object.location_address_2 is not empty %}<span itemprop="streetAddress"> {{ object.location_address_2 }}</span>{% endif %},
+        {% endif %}
+
+        {% if object.location_postcode %}
+        <span itemprop="postalCode">{{ object.location_postcode }}</span>,
+        {% endif %}
+
+        {% if object.location_city %}
+        <span itemprop="addressLocality">{{ object.location_city }}</span>,
+        {% endif %}
+
+        {% if object.location_country %}
+        <span itemprop="addressCountry">{{ object.location_country }}</span>
+        {% endif %}
+
+      {% if( object.venueHasAddress() ) %}
+        </div>
+      {% endif %}
+
+  	</section>
+
+    {% if object.location_google_maps_link is not empty %}
+      <a class="google-maps" href='{{ object.location_google_maps_link }}' target="_blank">
+          {{ __("View on google maps", "clarkson-theme") }}
+      </a>
+    {% endif %}
+
+  </div>
+{% endif %}

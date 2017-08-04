@@ -1,0 +1,23 @@
+{% if object.ticket_options is not empty %}
+  <div class="event-tickets event-detail" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+    <h3>{{ __("Tickets / Fees", "clarkson-theme") }}</h3>
+    {% for ticket_option in object.ticket_options %}
+      <article class="ticket-option" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        {# These field are mandatory, so no check is needed #}
+        <p>
+          <span class="ticket-option-title" itemprop="name">{{ ticket_option.title }}</span>
+          <span class="ticket-option-price" itemprop="price">{{ ticket_option.price }}</span>
+        </p>
+
+        {% if ticket_option.description is not empty %}
+          <div class="ticket-option-description" itemprop="description">{{ ticket_option.description | raw }}</div>
+        {% endif %}
+
+        {% if ticket_option.registration_link is not empty %}
+            <a href="{{ ticket_option.registration_link }}" class="ticket-option-url" itemprop="url">{{ __("Register here", "clarkson-theme") }}</a>
+        {% endif %}
+
+      </article>
+    {% endfor %}
+  </div>
+{% endif %}

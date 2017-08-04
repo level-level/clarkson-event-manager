@@ -1,0 +1,16 @@
+<div {{ post_class( 'teaser event', object.get_ID() ) }} itemscope itemtype="http://schema.org/Event">
+    <a class="entry-title event-title" href="{{ object.get_permalink() }}" itemprop="name"> {{ object.get_title() | raw }}</a>
+    <div class="entry-meta">
+        <div class="date event-date">{{ object.get_event_date() | raw }}</div>
+
+        {% if object.date_start_time is not empty %}
+            <div class="time event-time">{{ object.get_event_date_start_time('H:i') }} {% if object.date_end_time is not empty %} - {{ object.get_event_date_end_format('H:i') }} {% endif %}</div>
+        {% endif %}
+
+        {% if object.location_venue is not empty %}
+            <div class="venue event-venue" itemprop="location" itemscope itemtype="http://schema.org/Place">
+                <span itemprop="name">{{ object.location_venue() }}</span>
+            </div>
+        {% endif %}
+    </div>
+</div>
