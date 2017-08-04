@@ -18,6 +18,7 @@ class Setup {
     if($this->checkDependencies()){
       $this->createPostType();
       $this->loadDefaultACFFields();
+	  add_filter( 'clarkson_twig_functions', array( $this, 'addClarksonTwigFunctions' ) );
     }
   }
 
@@ -676,4 +677,11 @@ class Setup {
 
       endif;
   }
+
+	public function addClarksonTwigFunctions( $array ) {
+		$array[] = 'filesize';
+		$array[] = 'size_format';
+		$array[] = 'file_exists';
+		return $array;
+	}
 }

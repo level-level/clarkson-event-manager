@@ -1,19 +1,26 @@
 {% if object.information_attachments is not empty %}
   <div class="event-detail event-attachments">
     <h3>{{ __("Downloads", "clarkson-theme") }}</h3>
+
     {% for attachment in object.information_attachments %}
-      <article class="attachment-item">
-        <div class='attachment-description-container'>
-          <p class='attachment-title'>{{ __("Download", "clarkson-theme") }}: <a href='{{ attachment.attachment.url }}'>{{ attachment.title }}</a>
-              {% if object.get_readable_filesize( attachment.attachment.ID ) is not empty %}
-                  <span class='attachment-size'>({{ object.get_readable_filesize( attachment.attachment.ID ) }})</span>
-              {% endif %}
-          </p>
-        </div>
-        <div class='attachment-download-container'>
-          <a href='{{ attachment.attachment.url }}' class='button button-download-attachment' target="_blank">{{ __("Download", "clarkson-theme") }}</a>
-        </div>
-      </article>
+
+      {% set file = get_attached_file( attachment.attachment.ID ) %}
+      {% if ( file_exists( file ) ) %}
+
+        <article class="attachment-item">
+          <div class='attachment-description-container'>
+            <p class='attachment-title'>
+              {{ __("Download", "clarkson-theme") }}: <a href='{{ attachment.attachment.url }}'>{{ attachment.title }}</a>
+              <span class="attachment-size">{{ size_format( filesize( file ) ) }}</span>
+            </p>
+          </div>
+          <div class="attachment-download-container">
+            <a href="{{ attachment.attachment.url }}" class="button button-download-attachment" target="_blank">{{ __("Download", "clarkson-theme") }}</a>
+          </div>
+        </article>
+      {% endif %}
+
     {% endfor %}
+
   </div>
 {% endif %}
