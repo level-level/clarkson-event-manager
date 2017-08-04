@@ -2,7 +2,7 @@
     "name": "level-level/clarkson-event-manager",
     "description": "Event manager based on Clarkson and ACF.",
     "type": "library",
-    "license": "proprietary",
+    "license": "GPLv2",
     "authors": [
         {
             "name": "Level Level"
