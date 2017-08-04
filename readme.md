@@ -26,7 +26,16 @@ $eventQuery = $eventController->prepareQuery( $args );
 return $eventController->getEvents( $eventQuery );
 ```
 
-## Example templates
+## Alter args to use with FaceWP
+
+```
+add_filter( 'clarkson_event_manager_query_args', function( $args ) {
+  $args['facetwp'] = true;
+  return $args;
+});
+```
+
+## Template examples
 You can check out some [basic example templates](/templates) to style an Single Event or Archive page. 
 Always copy these to your own theme because these are examples!
 
