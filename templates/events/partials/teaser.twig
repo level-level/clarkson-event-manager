@@ -4,7 +4,7 @@
         <div class="date event-date">{{ object.get_event_date() | raw }}</div>
 
         {% if object.date_start_time is not empty %}
-            <div class="time event-time">{{ object.get_event_date_start_time('H:i') }} {% if object.date_end_time is not empty %} - {{ object.get_event_date_end_format('H:i') }} {% endif %}</div>
+            <div class="time event-time">{{ object.get_event_date_start_time('H:i') }} {% if object.date_end_time is not empty %} - {{ object.get_event_date_end_time('H:i') }} {% endif %}</div>
         {% endif %}
 
         {% if object.location_venue is not empty %}
