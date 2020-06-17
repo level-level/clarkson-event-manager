@@ -3,7 +3,7 @@
     "description": "Event manager based on Clarkson and ACF Pro.",
     "type": "library",
     "license": "GPL-3.0",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "authors": [
         {
             "name": "Level Level"
