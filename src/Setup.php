@@ -17,7 +17,10 @@ class Setup {
   public function __construct(){
     if($this->checkDependencies()){
       $this->createPostType();
-      $this->loadDefaultACFFields();
+	  if( apply_filters('clarkon_event_load_default_acf_fields', true) ) {
+		$this->loadDefaultACFFields();
+	  }
+	  
 	  add_filter( 'clarkson_twig_functions', array( $this, 'addClarksonTwigFunctions' ) );
     }
   }
