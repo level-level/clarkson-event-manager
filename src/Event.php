@@ -2,6 +2,8 @@
 
 namespace Clarkson\EventManager;
 
+use Clarkson_Core\WordPress_Object\Clarkson_Object;
+
 /**
  * Data container for events information
  */
