@@ -2,10 +2,12 @@
 
 namespace Clarkson\EventManager;
 
+use Clarkson_Core\WordPress_Object\Clarkson_Object;
+
 /**
  * Data container for events information
  */
-class Event extends \Clarkson_Object{
+class Event extends Clarkson_Object{
 
   public static $type = 'clarkson_event';
 
