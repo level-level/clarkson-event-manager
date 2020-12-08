@@ -10,7 +10,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "level-level/clarkson-core": "^1.0"
+    },
     "autoload": {
       "psr-4":{
         "Clarkson\\EventManager\\": "src/"

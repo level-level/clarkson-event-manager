@@ -5,7 +5,7 @@ namespace Clarkson\EventManager;
 /**
  * Data container for events information
  */
-class Event extends \Clarkson_Object{
+class Event extends Clarkson_Object{
 
   public static $type = 'clarkson_event';
 
