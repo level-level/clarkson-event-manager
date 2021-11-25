@@ -12,7 +12,7 @@ class Event extends Clarkson_Object{
   public static $type = 'clarkson_event';
 
   /**
-   * @var data Contains ACF field content
+   * @var array
    */
   public $data;
 
