@@ -9,7 +9,7 @@ class EventController{
   /**
    * Generates a basic query object to be enhanced with additional filters
    * @method prepareQuery
-   * @param  EventControllerOptions           $options Options for the base query
+   * @param  array           $options Options for the base query
    * @return \WP_Query        Query object with post type, datetimes set.
    */
     public function prepareQuery($options = array()){
