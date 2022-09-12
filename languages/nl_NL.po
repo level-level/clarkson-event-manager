@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/clarkson-event-"
 "manager\n"
 "POT-Creation-Date: 2022-09-12T09:16:29+00:00\n"
-"PO-Revision-Date: 2022-09-12 11:25+0200\n"
+"PO-Revision-Date: 2022-09-12 12:29+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -91,11 +91,11 @@ msgstr "Einddatum"
 
 #: src/Setup.php:182
 msgid "Location"
-msgstr "Locatie"
+msgstr "Plaats"
 
 #: src/Setup.php:198
 msgid "Venue"
-msgstr "Venue"
+msgstr "Locatie"
 
 #: src/Setup.php:255
 msgid "City"
