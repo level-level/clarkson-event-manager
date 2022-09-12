@@ -1,0 +1,173 @@
+# Copyright (C) 2022 
+# This file is distributed under the same license as the Clarkson Event Manager plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Clarkson Event Manager\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/clarkson-event-manager\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-09-12T09:16:29+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: clarkson-event-manager\n"
+
+#. Plugin Name of the plugin
+msgid "Clarkson Event Manager"
+msgstr ""
+
+#: src/Setup.php:48
+#: src/Setup.php:60
+msgid "Events"
+msgstr ""
+
+#: src/Setup.php:49
+msgid "Event"
+msgstr ""
+
+#: src/Setup.php:50
+msgid "All Events"
+msgstr ""
+
+#: src/Setup.php:51
+msgid "New Event"
+msgstr ""
+
+#: src/Setup.php:52
+msgid "Add New"
+msgstr ""
+
+#: src/Setup.php:53
+msgid "Add New Event"
+msgstr ""
+
+#: src/Setup.php:54
+msgid "Edit Event"
+msgstr ""
+
+#: src/Setup.php:55
+msgid "View Event"
+msgstr ""
+
+#: src/Setup.php:56
+msgid "Search Events"
+msgstr ""
+
+#: src/Setup.php:57
+msgid "No Events found"
+msgstr ""
+
+#: src/Setup.php:58
+msgid "No Events found in trash"
+msgstr ""
+
+#: src/Setup.php:59
+msgid "Parent Event"
+msgstr ""
+
+#: src/Setup.php:100
+msgid "Date"
+msgstr ""
+
+#: src/Setup.php:116
+msgid "Start date"
+msgstr ""
+
+#: src/Setup.php:133
+msgid "Start time"
+msgstr ""
+
+#: src/Setup.php:149
+msgid "End date"
+msgstr ""
+
+#: src/Setup.php:166
+msgid "End time"
+msgstr ""
+
+#: src/Setup.php:182
+msgid "Location"
+msgstr ""
+
+#: src/Setup.php:198
+msgid "Venue"
+msgstr ""
+
+#: src/Setup.php:255
+msgid "City"
+msgstr ""
+
+#: src/Setup.php:274
+msgid "Postcode"
+msgstr ""
+
+#: src/Setup.php:293
+msgid "Country"
+msgstr ""
+
+#: src/Setup.php:312
+msgid "Google maps link"
+msgstr ""
+
+#: src/Setup.php:328
+msgid "Information"
+msgstr ""
+
+#: src/Setup.php:344
+msgid "More info link"
+msgstr ""
+
+#: src/Setup.php:360
+msgid "Short description"
+msgstr ""
+
+#: src/Setup.php:376
+msgid "Attachments"
+msgstr ""
+
+#: src/Setup.php:395
+#: src/Setup.php:470
+msgid "Title"
+msgstr ""
+
+#: src/Setup.php:414
+msgid "Attachment"
+msgstr ""
+
+#: src/Setup.php:451
+msgid "Ticket options"
+msgstr ""
+
+#: src/Setup.php:489
+msgid "Price"
+msgstr ""
+
+#: src/Setup.php:508
+msgid "Registration link"
+msgstr ""
+
+#: src/Setup.php:524
+msgid "Description"
+msgstr ""
+
+#: src/Setup.php:545
+msgid "Contact"
+msgstr ""
+
+#: src/Setup.php:561
+msgid "Contacts"
+msgstr ""
+
+#: src/Setup.php:580
+msgid "Name"
+msgstr ""
+
+#: src/Setup.php:599
+msgid "Organisation"
+msgstr ""
+
+#: src/Setup.php:636
+msgid "Phone"
+msgstr ""
