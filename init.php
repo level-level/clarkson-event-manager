@@ -1,4 +1,10 @@
 <?php
+/*
+Plugin Name: Clarkson Event Manager
+Text Domain: clarkson-event-manager
+Domain Path: /languages
+*/
+
 // Skip loading the hookmanager if not in a WordPress context
 if ( ! defined('WPINC') ) {
     return;
