@@ -1,7 +1,7 @@
 {
     "name": "level-level/clarkson-event-manager",
     "description": "Event manager based on Clarkson and ACF Pro.",
-    "type": "library",
+    "type": "wordpress-plugin",
     "license": "GPL-3.0",
     "authors": [
         {
