@@ -25,7 +25,10 @@ function clarkson_event_manager_load_plugin() {
 add_action( 'plugins_loaded', 'clarkson_event_manager_load_plugin', 20 );
 
 function clarkson_event_manager_init_plugin() {
-
+	// Load translations
+	load_muplugin_textdomain( 'clarkson-event-manager', dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	load_plugin_textdomain( 'clarkson-event-manager', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+    
     // Instantiate main plugin object
     new \Clarkson\EventManager\Setup();
 }
