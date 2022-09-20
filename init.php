@@ -1,6 +1,10 @@
 <?php
 /*
 Plugin Name: Clarkson Event Manager
+Plugin URI: https://github.com/level-level/clarkson-event-manager/
+Description: Add a simple events agenda.
+Author: Level Level
+Author URI: https://level-level.com
 Text Domain: clarkson-event-manager
 Domain Path: /languages
 */
