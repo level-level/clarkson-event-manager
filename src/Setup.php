@@ -21,7 +21,6 @@ class Setup {
 		$this->loadDefaultACFFields();
 	  }
 
-	  load_plugin_textdomain( 'clarkson-event-manager', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	  add_filter( 'clarkson_twig_functions', array( $this, 'addClarksonTwigFunctions' ) );
     }
   }
