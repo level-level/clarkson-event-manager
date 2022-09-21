@@ -1,0 +1,190 @@
+# Copyright (C) 2022 Level Level
+# This file is distributed under the same license as the Clarkson Event Manager plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Clarkson Event Manager\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/clarkson-event-"
+"manager\n"
+"POT-Creation-Date: 2022-09-20T07:50:57+00:00\n"
+"PO-Revision-Date: 2022-09-20 09:52+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Domain: clarkson-event-manager\n"
+
+#. Plugin Name of the plugin
+msgid "Clarkson Event Manager"
+msgstr "Clarkson Evenementen Manager"
+
+#. Plugin URI of the plugin
+msgid "https://github.com/level-level/clarkson-event-manager/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Add a simple events agenda."
+msgstr "Voegt een simpele evenementen-agenda toe."
+
+#. Author of the plugin
+msgid "Level Level"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.level-level.com"
+msgstr ""
+
+#: src/Setup.php:49 src/Setup.php:61
+msgid "Events"
+msgstr "Evenementen"
+
+#: src/Setup.php:50
+msgid "Event"
+msgstr "Evenement"
+
+#: src/Setup.php:51
+msgid "All Events"
+msgstr "Alle evenementen"
+
+#: src/Setup.php:52
+msgid "New Event"
+msgstr "Nieuw evenement"
+
+#: src/Setup.php:53
+msgid "Add New"
+msgstr "Nieuwe toevoegen"
+
+#: src/Setup.php:54
+msgid "Add New Event"
+msgstr "Nieuw evenement toevoegen"
+
+#: src/Setup.php:55
+msgid "Edit Event"
+msgstr "Evenement bewerken"
+
+#: src/Setup.php:56
+msgid "View Event"
+msgstr "Evenement bekijken"
+
+#: src/Setup.php:57
+msgid "Search Events"
+msgstr "Evenementen zoeken"
+
+#: src/Setup.php:58
+msgid "No Events found"
+msgstr "Geen evenementen gevonden"
+
+#: src/Setup.php:59
+msgid "No Events found in trash"
+msgstr "Geen evenementen in de prullenbak gevonden"
+
+#: src/Setup.php:60
+msgid "Parent Event"
+msgstr "Hoofd-evenement"
+
+#: src/Setup.php:101
+msgid "Date"
+msgstr "Datum"
+
+#: src/Setup.php:117
+msgid "Start date"
+msgstr "Begintijd"
+
+#: src/Setup.php:134
+msgid "Start time"
+msgstr "Eindtijd"
+
+#: src/Setup.php:150
+msgid "End date"
+msgstr "Begindatum"
+
+#: src/Setup.php:167
+msgid "End time"
+msgstr "Einddatum"
+
+#: src/Setup.php:183
+msgid "Location"
+msgstr "Locatie"
+
+#: src/Setup.php:199
+msgid "Venue"
+msgstr "Venue"
+
+#: src/Setup.php:256
+msgid "City"
+msgstr "Stad"
+
+#: src/Setup.php:275
+msgid "Postcode"
+msgstr "Postcode"
+
+#: src/Setup.php:294
+msgid "Country"
+msgstr "Land"
+
+#: src/Setup.php:313
+msgid "Google maps link"
+msgstr "Link naar Google maps"
+
+#: src/Setup.php:329
+msgid "Information"
+msgstr "Informatie"
+
+#: src/Setup.php:345
+msgid "More info link"
+msgstr "Meer informatie link"
+
+#: src/Setup.php:361
+msgid "Short description"
+msgstr "Korte beschrijving"
+
+#: src/Setup.php:377
+msgid "Attachments"
+msgstr "Bijlagen"
+
+#: src/Setup.php:396 src/Setup.php:471
+msgid "Title"
+msgstr "Titel"
+
+#: src/Setup.php:415
+msgid "Attachment"
+msgstr "Bijlage"
+
+#: src/Setup.php:452
+msgid "Ticket options"
+msgstr "Ticket opties"
+
+#: src/Setup.php:490
+msgid "Price"
+msgstr "Prijs"
+
+#: src/Setup.php:509
+msgid "Registration link"
+msgstr "Link naar registretie"
+
+#: src/Setup.php:525
+msgid "Description"
+msgstr "Beschrijving"
+
+#: src/Setup.php:546
+msgid "Contact"
+msgstr "Contact"
+
+#: src/Setup.php:562
+msgid "Contacts"
+msgstr "Contacten"
+
+#: src/Setup.php:581
+msgid "Name"
+msgstr "Naam"
+
+#: src/Setup.php:600
+msgid "Organisation"
+msgstr "Organisatie"
+
+#: src/Setup.php:637
+msgid "Phone"
+msgstr "Telefoonnummer"

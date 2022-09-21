@@ -1,4 +1,15 @@
 <?php
+/*
+Plugin Name: Clarkson Event Manager
+Plugin URI: https://github.com/level-level/clarkson-event-manager/
+Version: 2.0.0
+Description: Add a simple events agenda.
+Author: Level Level
+Author URI: https://level-level.com
+Text Domain: clarkson-event-manager
+Domain Path: /languages
+*/
+
 // Skip loading the hookmanager if not in a WordPress context
 if ( ! defined('WPINC') ) {
     return;
@@ -15,7 +26,9 @@ function clarkson_event_manager_load_plugin() {
 add_action( 'plugins_loaded', 'clarkson_event_manager_load_plugin', 20 );
 
 function clarkson_event_manager_init_plugin() {
-
+	// Load translations
+	load_plugin_textdomain( 'clarkson-event-manager', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+    
     // Instantiate main plugin object
     new \Clarkson\EventManager\Setup();
 }
