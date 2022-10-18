@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/clarkson-event-"
 "manager\n"
 "POT-Creation-Date: 2022-09-20T07:50:57+00:00\n"
-"PO-Revision-Date: 2022-09-20 09:52+0200\n"
+"PO-Revision-Date: 2022-10-18 09:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -91,19 +91,19 @@ msgstr "Datum"
 
 #: src/Setup.php:117
 msgid "Start date"
-msgstr "Begintijd"
+msgstr "Begindatum"
 
 #: src/Setup.php:134
 msgid "Start time"
-msgstr "Eindtijd"
+msgstr "Begintijd"
 
 #: src/Setup.php:150
 msgid "End date"
-msgstr "Begindatum"
+msgstr "Einddatum"
 
 #: src/Setup.php:167
 msgid "End time"
-msgstr "Einddatum"
+msgstr "Eindtijd"
 
 #: src/Setup.php:183
 msgid "Location"
@@ -163,7 +163,7 @@ msgstr "Prijs"
 
 #: src/Setup.php:509
 msgid "Registration link"
-msgstr "Link naar registretie"
+msgstr "Link naar registratie"
 
 #: src/Setup.php:525
 msgid "Description"
