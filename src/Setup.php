@@ -91,11 +91,8 @@ class Setup {
   protected function loadDefaultACFFields(){
     if( function_exists('acf_add_local_field_group') ):
 
-      acf_add_local_field_group(array (
-      	'key' => 'group_59145820f23d4',
-      	'title' => 'Event standard data',
-      	'fields' => array (
-      		array (
+		$tab_date = array(
+			array (
       			'key' => 'field_59145945b2e21',
       			'label' => __('Date', 'clarkson-event-manager'),
       			'name' => '',
@@ -177,7 +174,10 @@ class Setup {
       			'display_format' => 'H:i',
       			'return_format' => 'H:i',
       		),
-      		array (
+		);
+
+		$tab_location = array(
+			array (
       			'key' => 'field_59145866b2e19',
       			'label' => __('Location', 'clarkson-event-manager'),
       			'name' => '',
@@ -323,7 +323,10 @@ class Setup {
       			'default_value' => '',
       			'placeholder' => '',
       		),
-      		array (
+		);
+
+		$tab_information = array(
+			array (
       			'key' => 'field_59145a78b2e27',
       			'label' => __('Information', 'clarkson-event-manager'),
       			'name' => '',
@@ -430,7 +433,10 @@ class Setup {
       				),
       			),
       		),
-      		array (
+		);
+
+		$tab_ticket_registration = array(
+			array (
       			'key' => 'field_59145af4b2e2b',
       			'label' => 'Tickets / Registration',
       			'name' => '',
@@ -540,7 +546,10 @@ class Setup {
       				),
       			),
       		),
-      		array (
+		);
+
+		$tab_contact = array(
+			array (
       			'key' => 'field_59145bebb2e31',
       			'label' => __('Contact', 'clarkson-event-manager'),
       			'name' => '',
@@ -652,7 +661,18 @@ class Setup {
       				),
       			),
       		),
-      	),
+		);
+
+      acf_add_local_field_group(array (
+      	'key' => 'group_59145820f23d4',
+      	'title' => __('Event', 'clarkson-event-manager'),
+      	'fields' => array_merge(
+			apply_filters('clarkson_event_manager_tab_date', $tab_date) ? $tab_date : array(),
+			apply_filters('clarkson_event_manager_tab_location', $tab_location) ? $tab_location : array(),
+			apply_filters('clarkson_event_manager_tab_information', $tab_information) ? $tab_information : array(),
+			apply_filters('clarkson_event_manager_tab_ticket_registration', $tab_ticket_registration) ? $tab_ticket_registration : array(),
+			apply_filters('clarkson_event_manager_tab_contact', $tab_contact) ? $tab_contact : array()
+		),
       	'location' => array (
       		array (
       			array (
