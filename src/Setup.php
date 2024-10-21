@@ -214,7 +214,7 @@ class Setup {
       		),
       		array (
       			'key' => 'field_59145894b2e1b',
-      			'label' => 'Address line 1',
+      			'label' => __('Address line 1', 'clarkson-event-manager'),
       			'name' => 'clarkson_event_manager_location_address_1',
       			'type' => 'text',
       			'instructions' => '',
@@ -233,7 +233,7 @@ class Setup {
       		),
       		array (
       			'key' => 'field_591458b2b2e1c',
-      			'label' => 'Address line 2',
+      			'label' => __('Address line 2', 'clarkson-event-manager'),
       			'name' => 'clarkson_event_manager_location_address_2',
       			'type' => 'text',
       			'instructions' => '',
@@ -271,7 +271,7 @@ class Setup {
       		),
       		array (
       			'key' => 'field_591458f2b2e1e',
-      			'label' => __('Postcode', 'clarkson-event-manager'),
+      			'label' => __('Postalcode', 'clarkson-event-manager'),
       			'name' => 'clarkson_event_manager_location_postcode',
       			'type' => 'text',
       			'instructions' => '',
@@ -438,7 +438,7 @@ class Setup {
 		$tab_ticket_registration = array(
 			array (
       			'key' => 'field_59145af4b2e2b',
-      			'label' => 'Tickets / Registration',
+      			'label' => __('Tickets / Registration', 'clarkson-event-manager'),
       			'name' => '',
       			'type' => 'tab',
       			'instructions' => '',
@@ -624,7 +624,7 @@ class Setup {
       				),
       				array (
       					'key' => 'field_59145c6db2e36',
-      					'label' => 'E-mail',
+      					'label' => __('E-mail', 'clarkson-event-manager'),
       					'name' => 'e-mail',
       					'type' => 'email',
       					'instructions' => '',
