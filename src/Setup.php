@@ -664,17 +664,17 @@ class Setup {
 		);
 	
 		$fields = array_merge(
-			array_filter(apply_filters('clarkson_event_manager_tab_date', $tab_date) ? $tab_date : array()),
-			array_filter(apply_filters('clarkson_event_manager_tab_location', $tab_location) ? $tab_location : array()),
-			array_filter(apply_filters('clarkson_event_manager_tab_information', $tab_information) ? $tab_information : array()),
-			array_filter(apply_filters('clarkson_event_manager_tab_ticket_registration', $tab_ticket_registration) ? $tab_ticket_registration : array()),
-			array_filter(apply_filters('clarkson_event_manager_tab_contact', $tab_contact) ? $tab_contact : array())
+			apply_filters('clarkson_event_manager_tab_date', $tab_date) ? $tab_date : array(),
+			apply_filters('clarkson_event_manager_tab_location', $tab_location) ? $tab_location : array(),
+			apply_filters('clarkson_event_manager_tab_information', $tab_information) ? $tab_information : array(),
+			apply_filters('clarkson_event_manager_tab_ticket_registration', $tab_ticket_registration) ? $tab_ticket_registration : array(),
+			apply_filters('clarkson_event_manager_tab_contact', $tab_contact) ? $tab_contact : array()
 		);
 
       acf_add_local_field_group(array (
       	'key' => 'group_59145820f23d4',
       	'title' => __('Event', 'clarkson-event-manager'),
-      	'fields' => $fields,
+      	'fields' => array_filter($fields),
       	'location' => array (
       		array (
       			array (
