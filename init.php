@@ -2,7 +2,7 @@
 /*
 Plugin Name: Clarkson Event Manager
 Plugin URI: https://github.com/level-level/clarkson-event-manager/
-Version: 2.0.2
+Version: 2.1.0
 Description: Add a simple events agenda.
 Author: Level Level
 Author URI: https://level-level.com

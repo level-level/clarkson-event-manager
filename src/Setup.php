@@ -91,11 +91,8 @@ class Setup {
   protected function loadDefaultACFFields(){
     if( function_exists('acf_add_local_field_group') ):
 
-      acf_add_local_field_group(array (
-      	'key' => 'group_59145820f23d4',
-      	'title' => 'Event standard data',
-      	'fields' => array (
-      		array (
+		$tab_date = array(
+			array (
       			'key' => 'field_59145945b2e21',
       			'label' => __('Date', 'clarkson-event-manager'),
       			'name' => '',
@@ -177,7 +174,10 @@ class Setup {
       			'display_format' => 'H:i',
       			'return_format' => 'H:i',
       		),
-      		array (
+		);
+
+		$tab_location = array(
+			array (
       			'key' => 'field_59145866b2e19',
       			'label' => __('Location', 'clarkson-event-manager'),
       			'name' => '',
@@ -214,7 +214,7 @@ class Setup {
       		),
       		array (
       			'key' => 'field_59145894b2e1b',
-      			'label' => 'Address line 1',
+      			'label' => __('Address line 1', 'clarkson-event-manager'),
       			'name' => 'clarkson_event_manager_location_address_1',
       			'type' => 'text',
       			'instructions' => '',
@@ -233,7 +233,7 @@ class Setup {
       		),
       		array (
       			'key' => 'field_591458b2b2e1c',
-      			'label' => 'Address line 2',
+      			'label' => __('Address line 2', 'clarkson-event-manager'),
       			'name' => 'clarkson_event_manager_location_address_2',
       			'type' => 'text',
       			'instructions' => '',
@@ -271,7 +271,7 @@ class Setup {
       		),
       		array (
       			'key' => 'field_591458f2b2e1e',
-      			'label' => __('Postcode', 'clarkson-event-manager'),
+      			'label' => __('Postalcode', 'clarkson-event-manager'),
       			'name' => 'clarkson_event_manager_location_postcode',
       			'type' => 'text',
       			'instructions' => '',
@@ -323,7 +323,10 @@ class Setup {
       			'default_value' => '',
       			'placeholder' => '',
       		),
-      		array (
+		);
+
+		$tab_information = array(
+			array (
       			'key' => 'field_59145a78b2e27',
       			'label' => __('Information', 'clarkson-event-manager'),
       			'name' => '',
@@ -430,9 +433,12 @@ class Setup {
       				),
       			),
       		),
-      		array (
+		);
+
+		$tab_ticket_registration = array(
+			array (
       			'key' => 'field_59145af4b2e2b',
-      			'label' => 'Tickets / Registration',
+      			'label' => __('Tickets / Registration', 'clarkson-event-manager'),
       			'name' => '',
       			'type' => 'tab',
       			'instructions' => '',
@@ -540,7 +546,10 @@ class Setup {
       				),
       			),
       		),
-      		array (
+		);
+
+		$tab_contact = array(
+			array (
       			'key' => 'field_59145bebb2e31',
       			'label' => __('Contact', 'clarkson-event-manager'),
       			'name' => '',
@@ -615,7 +624,7 @@ class Setup {
       				),
       				array (
       					'key' => 'field_59145c6db2e36',
-      					'label' => 'E-mail',
+      					'label' => __('E-mail', 'clarkson-event-manager'),
       					'name' => 'e-mail',
       					'type' => 'email',
       					'instructions' => '',
@@ -652,7 +661,20 @@ class Setup {
       				),
       			),
       		),
-      	),
+		);
+	
+		$fields = array_merge(
+			apply_filters('clarkson_event_manager_tab_date', $tab_date) ? $tab_date : array(),
+			apply_filters('clarkson_event_manager_tab_location', $tab_location) ? $tab_location : array(),
+			apply_filters('clarkson_event_manager_tab_information', $tab_information) ? $tab_information : array(),
+			apply_filters('clarkson_event_manager_tab_ticket_registration', $tab_ticket_registration) ? $tab_ticket_registration : array(),
+			apply_filters('clarkson_event_manager_tab_contact', $tab_contact) ? $tab_contact : array()
+		);
+
+      acf_add_local_field_group(array (
+      	'key' => 'group_59145820f23d4',
+      	'title' => __('Event', 'clarkson-event-manager'),
+      	'fields' => array_filter($fields),
       	'location' => array (
       		array (
       			array (
